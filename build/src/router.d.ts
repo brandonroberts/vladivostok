@@ -46,13 +46,13 @@ export declare class Router {
     private outletMap;
     private location;
     private injector;
+    private config;
     private currentUrlTree;
     private currentRouterState;
-    private config;
     private locationSubscription;
     private routerEvents;
     private navigationId;
-    constructor(rootComponentType: Type, resolver: ComponentResolver, urlSerializer: UrlSerializer, outletMap: RouterOutletMap, location: Location, injector: Injector);
+    constructor(rootComponentType: Type, resolver: ComponentResolver, urlSerializer: UrlSerializer, outletMap: RouterOutletMap, location: Location, injector: Injector, config: RouterConfig);
     readonly routerState: RouterState;
     readonly urlTree: UrlTree;
     readonly events: Observable<Event>;

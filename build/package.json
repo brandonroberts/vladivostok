@@ -1,5 +1,5 @@
 {
-  "name": "vladivostok",
+  "name": "@angular/router",
   "version": "0.9.1",
   "description": "",
   "main": "./build/src/index.js",
