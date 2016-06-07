@@ -53,7 +53,6 @@ export declare class Router {
     private routerEvents;
     private navigationId;
     constructor(rootComponentType: Type, resolver: ComponentResolver, urlSerializer: UrlSerializer, outletMap: RouterOutletMap, location: Location, injector: Injector, config: RouterConfig);
-    initialNavigation(): void;
     readonly routerState: RouterState;
     readonly urlTree: UrlTree;
     readonly events: Observable<Event>;
