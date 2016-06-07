@@ -14,7 +14,7 @@ import 'rxjs/add/operator/concat';
 import 'rxjs/add/operator/concatMap';
 export interface NavigationExtras {
     relativeTo?: ActivatedRoute;
-    queryParameters?: Params;
+    queryParams?: Params;
     fragment?: string;
 }
 export declare class NavigationStart {
@@ -53,13 +53,14 @@ export declare class Router {
     private routerEvents;
     private navigationId;
     constructor(rootComponentType: Type, resolver: ComponentResolver, urlSerializer: UrlSerializer, outletMap: RouterOutletMap, location: Location, injector: Injector, config: RouterConfig);
+    initialNavigation(): void;
     readonly routerState: RouterState;
     readonly urlTree: UrlTree;
     readonly events: Observable<Event>;
     navigateByUrl(url: string): Promise<boolean>;
     resetConfig(config: RouterConfig): void;
     dispose(): void;
-    createUrlTree(commands: any[], {relativeTo, queryParameters, fragment}?: NavigationExtras): UrlTree;
+    createUrlTree(commands: any[], {relativeTo, queryParams, fragment}?: NavigationExtras): UrlTree;
     navigate(commands: any[], extras?: NavigationExtras): Promise<boolean>;
     serializeUrl(url: UrlTree): string;
     parseUrl(url: string): UrlTree;

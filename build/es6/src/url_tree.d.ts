@@ -1,11 +1,11 @@
 import { Tree, TreeNode } from './utils/tree';
 export declare function createEmptyUrlTree(): UrlTree;
 export declare class UrlTree extends Tree<UrlSegment> {
-    queryParameters: {
+    queryParams: {
         [key: string]: string;
     };
     fragment: string | null;
-    constructor(root: TreeNode<UrlSegment>, queryParameters: {
+    constructor(root: TreeNode<UrlSegment>, queryParams: {
         [key: string]: string;
     }, fragment: string | null);
 }
