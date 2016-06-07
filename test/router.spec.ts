@@ -310,7 +310,7 @@ describe("Integration", () => {
         [NavigationEnd, '/user/fedor']
       ]);
     })));
-  
+
   describe("router links", () => {
     it("should support string router links",
       fakeAsync(inject([Router, TestComponentBuilder], (router, tcb) => {
